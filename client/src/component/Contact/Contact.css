@@ -1,0 +1,45 @@
+.row{
+    --bs-gutter-x: 0rem;
+}
+.contact-left,.contact-mid,.contact-right{
+    background-color: #171616;
+    border-radius: 1rem;
+    border: 0.1rem solid #363434;
+}
+.contact-left,.contact-mid,.contact-right{
+    padding: 0.5rem;
+}
+.contact-top-heading{
+    color: white;
+}
+.contact-outer i{
+    color: white;
+}
+.contact-bottom{
+    border-radius: 2rem;
+    height: 70vh;
+    background-color: #171616;
+}
+.contact-bottom h2{
+    color: white;
+}
+.contact-message{
+    height: 10rem;
+}
+.contact-message::placeholder{
+   text-align: center;
+}
+.contact-bottom input{
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    border: 0.1rem solid #363434;
+    color: white;
+    background-color: black;
+}
+.contact-bottom-heading{
+    text-align: center;
+}
+.margin-setting{
+    margin-bottom: 1rem;
+}

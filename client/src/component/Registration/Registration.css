@@ -1,0 +1,38 @@
+.reg-mid{
+    background-color: #171616;
+    border-radius: 2rem;
+    /* box-shadow: 0px 0px 5px 5px; */
+    padding: 1rem;
+    border: 0.1rem solid #363434;
+}
+.reg-mid-left{
+    /* background-color: grey; */
+}
+.reg-mid-left h3{
+    color: white;
+    font-weight: bold;
+}
+.reg-mid-left input{
+    text-align: center;
+    /* padding: 0.05rem 1rem; */
+    background-color: black; 
+    margin-top: 1rem;
+    border: 0.1rem solid #363434;
+    color: white;
+    border-radius: 0.7rem;
+}
+input::placeholder{
+    text-align: center;
+}
+.reg-btn{
+    margin: 2rem 0rem 0.5rem 0rem;  
+}
+.reg-mid-image img{
+    width: 30rem;
+}
+.reg-mid-nav span{
+    color: white;
+}
+.reg-mid-nav{
+    text-decoration: none;
+}

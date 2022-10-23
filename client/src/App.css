@@ -1,0 +1,10 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: #ffff;
+    text-decoration: none;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    /* display: flex;
+    align-items: center; */
+}

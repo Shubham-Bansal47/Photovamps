@@ -1,0 +1,35 @@
+.login-mid{
+    background-color: #171616;
+    border-radius: 2rem;
+    /* box-shadow: 0px 0px 5px 5px; */
+    padding: 1rem;
+    border: 0.1rem solid #363434;
+}
+.login-mid-left h3{
+    color: white;
+    font-weight: bold;
+}
+.login-mid-left input{
+    background-color: black;
+    margin-top: 1rem;
+    border: 0.1rem solid #363434;
+    border-radius: 0.7rem;
+    color: white;
+    text-align: center;
+}
+input::placeholder{
+    text-align: center;
+}
+.login-btn{
+    margin: 2rem 0rem 0.5rem 0rem;  
+}
+.login-mid-image img{
+    width: 20rem;
+}
+.login-mid-nav span{
+    color: white;
+    text-decoration: none;
+}
+/* .margin-login-setting{
+    margin-bottom: 1rem;
+} */

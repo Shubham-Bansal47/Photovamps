@@ -1,0 +1,20 @@
+.navbar{
+    width: 100%;
+}
+.navbar-label{
+    font-family: cursive;
+    font-style: italic;
+}
+.logoimage{
+    color: #ffff;
+    width: 3rem;
+}
+.nav-link{
+    color: #ffff;
+}
+.nav-link:hover{
+    color: burlywood;
+}
+.login-mid-nav{
+    text-decoration: none;
+}
