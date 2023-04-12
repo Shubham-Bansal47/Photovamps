@@ -1,0 +1,16 @@
+.tal-inner{
+    background-color: black;
+    border: 0.1rem solid #363434;
+    padding: 1rem;
+}
+.tal-inner-profile{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    color: white;
+    border-radius: 1rem;
+    background-color: #171616;
+}
+.tal-inner-profile span{
+
+    margin: 0.3rem;
+}

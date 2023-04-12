@@ -9,7 +9,11 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <NavLink className="ms-1 navbar-brand" to="#">
           <img className="logoimage" src="./images/navlogo.png" alt="_logoimage" />
+          PHOTOVAMPS
         </NavLink>
+        {/* <h2 className="navbar-label">
+          PHOTOVAMPS
+        </h2> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -21,9 +25,6 @@ function Navbar() {
         >
         <span className="navbar-toggler-icon"></span>
         </button>
-        <h2 className="navbar-label">
-          PHOTOVAMPS
-        </h2>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="me-1 navbar-nav ms-auto">
             <li className="nav-item">
@@ -37,9 +38,6 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/login">Login</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/registration">Registration</NavLink>
             </li>
           </ul>
         </div>

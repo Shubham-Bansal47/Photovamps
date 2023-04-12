@@ -12,7 +12,7 @@
     color: white;
     font-weight: bold;
 }
-.reg-mid-left input{
+.reg-mid-left input,select{
     text-align: center;
     /* padding: 0.05rem 1rem; */
     background-color: black; 
@@ -21,7 +21,7 @@
     color: white;
     border-radius: 0.7rem;
 }
-input::placeholder{
+select,input::placeholder{
     text-align: center;
 }
 .reg-btn{

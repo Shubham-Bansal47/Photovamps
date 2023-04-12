@@ -34,8 +34,9 @@ function Login(){
             window.alert("Fill the fields properly");
         }
         else if(data.status===200){
+            console.log(data);
             window.alert("User Matched");
-            navigate("/");
+            // navigate("/");
         }
         else if(data.status===406){
             window.alert("Invalid Credentials");

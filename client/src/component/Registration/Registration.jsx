@@ -69,7 +69,13 @@ function Registration(){
                     <input className="col-lg-8 col-sm-10" type="email" name='email' value={user.email} placeholder='&#9993; Email' onChange={clickhandler}/>
                     <input className="col-lg-8 col-sm-10" type="text" name='phone' value={user.number} placeholder='&#128222; Mobile Number' onChange={clickhandler}/>
                     <input className="col-lg-8 col-sm-10" type="text" name='work' value={user.description} placeholder='&#9861; Your Description' onChange={clickhandler}/>
-                    <input className="col-lg-8 col-sm-10" type="text" name='skill' value={user.skill} placeholder='&#x1F4BB; Skill' onChange={clickhandler}/>
+                    {/* <input className="col-lg-8 col-sm-10" type="text" name='skill' value={user.skill} placeholder='&#x1F4BB; Skill' onChange={clickhandler}/> */}
+                    <select name="skill" className='mt-3 col-lg-8 col-sm-10' onChange={clickhandler}>
+                        <option value="Graphic Designing">Graphic Designing</option>
+                        <option value="Video Editing">Video Editing</option>
+                        <option value="Animations">Animations</option>
+                        <option value="Developer">Developer</option>
+                    </select>
                     <input className="col-lg-8 col-sm-10" type="password" name='password' value={user.password} placeholder='&#x1f512; Password' onChange={clickhandler}/>
                     <input className="col-lg-8 col-sm-10" type="password" name='cpassword' value={user.cpassword} placeholder='&#x1f512; Confirm Password' onChange={clickhandler}/>
                     <button type='submit' className='margin-reg-setting col-lg-6 col-sm-7 reg-btn btn btn-success' onClick={postdata}>Register</button>

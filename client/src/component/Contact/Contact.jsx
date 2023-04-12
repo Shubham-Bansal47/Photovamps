@@ -1,12 +1,25 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 // import emailjs from '@emailjs/browser';
+import axios from 'axios';
 import './Contact.css';
 
 function Contact(){
     const form=useRef();
+    const [products,setproducts]=useState([]);
     const [user,setuser]=useState({
         Name:"",Email:"",Number:"",Message:""
     });
+    useEffect(() => {
+        const fetchdata = async ()=> {
+            let recieveddata = await axios.get("/signin");
+            if(recieveddata.data.status===200){
+                setproducts(recieveddata.data.data_received);
+            }else{
+                setproducts([]);
+            }
+        }
+        fetchdata();
+    },[]);
 
     let key,value;
     const clickhandler = (event) =>{
@@ -32,19 +45,19 @@ function Contact(){
                 <div className="row margin-setting contact-left col-lg-3 col-sm-7">
                     <div className="contact-top-left">
                         <h5 className='contact-top-heading'>&#9742; Phone Number</h5>
-                        <span className='contact-top-heading'>+91</span>
+                        <span className='contact-top-heading'>+91{products.phone}</span>
                     </div>
                 </div>
                 <div className="margin-setting contact-mid col-lg-3 col-sm-7">
                     <div className="contact-top-mid">
                         <h5 className='contact-top-heading'>&#x1F4E7; Email Address</h5>
-                        <span className='contact-top-heading'>+92</span>
+                        <span className='contact-top-heading'>Hey</span>
                     </div>
                 </div>
                 <div className="margin-setting contact-right col-lg-3 col-sm-7">
                     <div className="contact-top-right">
-                        <h5 className='contact-top-heading'>&#128205; Permanent Address</h5>
-                        <span className='contact-top-heading'>+93</span>
+                        <h5 className='contact-top-heading'>&#128205; Skill</h5>
+                        <span className='contact-top-heading'>Pending</span>
                     </div>
                 </div>
             </div>
