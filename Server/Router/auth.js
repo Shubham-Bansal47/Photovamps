@@ -5,6 +5,8 @@ const router=express.Router();
 
 const User=require('../Model/userSchema');
 
+
+
 router.get('/',(req,res)=>{
     res.send("Perfectly running auth");
 });   
@@ -30,8 +32,7 @@ router.post('/register',async (req,res)=>{
         }else{
             return res.json({message:"error registering"});
         }
-
-    }catch (err){   
+    }catch(err){   
         console.log(err);
     }
 
@@ -63,19 +64,42 @@ router.post('/signin',async(req,res)=>{
             const match= await bcrypt.compare(password,check.password);
             const token= await check.generateAuthToken();
             if(match){
-                return res.json({message:"User matched",status:200});
+                return res.json({message:"User matched",data_received:check,status:200});
             }
             else{
                 return res.json({message:"Invalid Credentials",status:406});
             }
         }
         else{
-            return res.json({message:"Register Firstly",status:402});
+            return res.json({message:"Register First",status:402});
         }        
 
     }catch(err){
         console.log(err);
     }
+});
+
+// router.get('/mongodatafetch', (req,res)=>{
+//     try{
+//         const data1 = User.find(
+//             (err,data) =>
+//             {
+//                 if(err)
+//                     res.json({message:"Unable to fetch data",status:500});
+//                 else
+//                     res.json({message:"data succesfully sent",status:203}).send(data);
+//             });
+//     }catch(error){
+//         console.log("Catch: ",error);
+//     }
+// });
+
+router.get('/mongodatafetch', (req, res) => {
+    User.find((err, data) => {
+            if(err) return res.json({message:"task failed!", status:503});
+            else return res.json({message:"data retrieved successful", data_received: data, status:203});
+        }
+    );
 });
 
 module.exports=router;
